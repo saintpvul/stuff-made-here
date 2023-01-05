@@ -33,14 +33,14 @@ body {
   box-shadow: 10px 0px 30px -10px rgba(0, 0, 0, 0.5);
 }
 
-.floating {
-  animation-name: floating;
+.floating-figure {
+  animation-name: floating-figure;
   animation-duration: 17s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.86, 0.54, 0.37, 0.89);
 }
 
-@keyframes floating {
+@keyframes floating-figure {
   0% {
     transform: rotate(-10deg);
   }
@@ -55,9 +55,38 @@ body {
 
 .logo-wrapper {
   position: absolute;
-  width: 20%;
-  height: 20%;
-  left: 80%;
-  top: 20%;
-  background: url(./assets/dict-main-img.png);
+  width: 100vw;
+  height: 100vh;
+}
+
+.main-logo {
+  position: absolute;
+  width: 35%;
+  height: fit-content;
+  left: 58%;
+  top: 10%;
+  transform: rotate(7deg);
+  -webkit-filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5));
+}
+
+.floating-img {
+  animation-name: floating-img;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.4, 0.8, 0.4, 0.87);
+}
+
+@keyframes floating-img {
+  0% {
+    transform: rotate(7deg);
+  }
+  50% {
+    transform: scale(0.9);
+    transform: rotate(-1deg);
+    left: 53%;
+  }
+  100% {
+    transform: rotate(7deg);
+  }
 }
