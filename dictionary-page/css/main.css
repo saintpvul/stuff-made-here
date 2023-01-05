@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+    to right bottom,
+    #845ec2,
+    #a583d1,
+    #c4a8e0,
+    #e0d0ef,
+    #fcf8ff
+  );
+  overflow: hidden;
+}
+
+.bg-figure {
+  background: #ffe6e0;
+  position: absolute;
+  top: 9%;
+  left: -18%;
+  transform: rotate(-10deg);
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+  filter: opacity(60%);
+  border-radius: 50%;
+  -webkit-box-shadow: 10px 0px 30px -10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 10px 0px 30px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 0px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.floating {
+  animation-name: floating;
+  animation-duration: 17s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.86, 0.54, 0.37, 0.89);
+}
+
+@keyframes floating {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(-13deg);
+    transform: scale(1.1);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+.logo-wrapper {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  left: 80%;
+  top: 20%;
+  background: url(./assets/dict-main-img.png);
+}
